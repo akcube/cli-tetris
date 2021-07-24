@@ -31,10 +31,10 @@ using namespace std;
 #define WALLBLOCK 9
 
 
-#define LEFT 87
-#define RIGHT 65
-#define UP 68
-#define DOWN 83
+#define LEFT 'a'
+#define RIGHT 'd'
+#define UP 'w'
+#define DOWN 's'
 #define SPACE 32
 
 
@@ -1273,23 +1273,23 @@ void gameLoop()
       //Timing control========================
       if (score <= 1000)
       {
-         usleep(1000*50);
+         usleep(100*50);
       }
       else if (score <= 1500)
       {
-         usleep(1000*40);
+         usleep(100*40);
       }
       else if (score <= 2000)
       {
-         usleep(1000*30);
+         usleep(100*30);
       }
       else if (score <= 2500)
       {
-         usleep(1000*20);
+         usleep(100*20);
       }
       else
       {
-         usleep(1000*10);
+         usleep(100*10);
       }
       block.setTicks(block.getTicks() + 1);
       bringDown = block.shouldBringPieceDown();
